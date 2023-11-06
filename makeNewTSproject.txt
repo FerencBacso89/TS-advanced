@@ -1,0 +1,18 @@
+Important: npm init -> npm install typescript --save-dev
+
+install package.json 
+
+install node modules
+
+looks like live server extension => install lite-server  ( npm install --save-dev lite-server )
+
+fontos, hogy a package.json /script részébe be kell még írni a "start" : "lite-server" kódot
+server indítása npm start-al
+
+Új typescript project létrehozása:
+
+- npm init   (node modules , package.json)
+
+- npm install typescript --save-dev
+
+- tsc --init    (ts.config fájl)
