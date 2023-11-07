@@ -81,9 +81,39 @@ const v2= new Truck();
 
 function useVehicle (vehicle:Vehicle) {
     vehicle.drive();
-    if (vehicle instanceof Truck) {         // Truck js seems like a constructor function so js understand constructor fn
+    if (vehicle instanceof Truck) {         // The 'Truck' in JavaScript appears to be a constructor function, which is why JavaScript can understand the constructor function.
         vehicle.loadCargo(10000);
     }
 }
 useVehicle(v1);
 useVehicle(v2);
+
+interface Bird {
+    type:'bird';
+    flySpeed:number;
+}
+interface Horse{
+    type:'horse';
+    runSpeed:number;
+}
+
+type Animal = Bird | Horse;
+function moveAnimal(animal:Animal){
+    let speed;
+    switch(animal.type){
+        case('bird'):speed=animal.flySpeed;break;
+        case('horse'):speed=animal.runSpeed;break;
+}
+    console.log(`Moving speed: ${speed} km/h`)
+}
+
+moveAnimal({type:'bird', flySpeed:25});
+//------------------------------------------- TYPE CASTING ---------------------------------------
+//v1
+const Inp =  document.getElementById('castInput')! as HTMLInputElement;
+//v2
+const InpV2 =  <HTMLInputElement> document.getElementById('castInput')!;
+console.log(Inp);
+if (Inp) {
+    Inp.value='Hello Word!';    
+}
