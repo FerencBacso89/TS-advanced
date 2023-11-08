@@ -109,11 +109,23 @@ function moveAnimal(animal:Animal){
 
 moveAnimal({type:'bird', flySpeed:25});
 //------------------------------------------- TYPE CASTING ---------------------------------------
+//még pontosítani kell, hogy a document.getElementById('castInput')! as HTMLInputElement kifejezés pontosan mit csinál mert a null értéket engedi
+//elvileg nem kéne
 //v1
 const Inp =  document.getElementById('castInput') as HTMLInputElement
 //v2
 const InpV2 =  <HTMLInputElement> document.getElementById('castInput')!;
 console.log(Inp);
-    if (Inp) { //v3
+    if (Inp) { //v3 
         (Inp as HTMLInputElement).value='Hello Word!';    
     }
+//------------------------------------------- INDEX PROPERTIES ---------------------------------------
+interface ErrorContainer {
+    //index types value-ja csak string típusú lehet
+    [email:string]:string;       //itt definiálom, hogy a property egy string és a value is string lesz
+}
+const errorBag:ErrorContainer= {
+    email:'Not a valid email...',
+    user:'Must start with a Capital character'
+};
+

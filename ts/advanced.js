@@ -67,11 +67,17 @@ function moveAnimal(animal) {
 }
 moveAnimal({ type: 'bird', flySpeed: 25 });
 //------------------------------------------- TYPE CASTING ---------------------------------------
+//még pontosítani kell, hogy a document.getElementById('castInput')! as HTMLInputElement kifejezés pontosan mit csinál mert a null értéket engedi
+//elvileg nem kéne
 //v1
 const Inp = document.getElementById('castInput');
 //v2
 const InpV2 = document.getElementById('castInput');
 console.log(Inp);
-if (Inp) { //v3
+if (Inp) { //v3 
     Inp.value = 'Hello Word!';
 }
+const errorBag = {
+    email: 'Not a valid email...',
+    user: 'Must start with a Capital character'
+};
