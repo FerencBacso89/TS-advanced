@@ -72,6 +72,6 @@ const Inp = document.getElementById('castInput');
 //v2
 const InpV2 = document.getElementById('castInput');
 console.log(Inp);
-if (Inp) {
+if (Inp) { //v3
     Inp.value = 'Hello Word!';
 }
