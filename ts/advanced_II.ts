@@ -13,7 +13,7 @@ function addF(a:Combinable, b:Combinable)
     }
     return a+b;
 }
-const result = addF(5," ") // 1, typescript nem tudja, hogy mindíg stringet fogunk vissza kapni ezért kell külön az as string 
+const result = addF(5,"-xy") // 1, typescript nem tudja, hogy mindíg stringet fogunk vissza kapni ezért kell külön az as string 
 if (typeof result === 'string') {
    const sREs=result.split('-');  //1, Szükséges a konvertálás mert nem tudja a string műveleteket elvégezni
     console.log(sREs);
