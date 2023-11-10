@@ -36,7 +36,7 @@ const FethedUserData={
 console.log(FethedUserData?.job?.title);
 
 //----------------------- nullish coalescing ---------------------------------
-const input = undefined; 
+const input:any = null; 
 const Stored = input ?? 'DEFAULT'; //  ha input null vagy undefinied -> 'DEFAULT', ha nem akkor az input értéke
 console.log(Stored);
 

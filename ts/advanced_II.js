@@ -27,7 +27,7 @@ const FethedUserData = {
 };
 console.log((_a = FethedUserData === null || FethedUserData === void 0 ? void 0 : FethedUserData.job) === null || _a === void 0 ? void 0 : _a.title);
 //----------------------- nullish coalescing ---------------------------------
-const input = undefined;
+const input = null;
 const Stored = input !== null && input !== void 0 ? input : 'DEFAULT'; //  ha input null vagy undefinied -> 'DEFAULT', ha nem akkor az input értéke
 console.log(Stored);
 //------------------------------------------------- GENERICS & GENERICS TYPE -------------------------------------
